@@ -1,16 +1,20 @@
 # Effective Mobile DevOps Test
 
-## Описание
+## 📌 Описание
 
 Простое веб-приложение, развернутое с использованием Docker и Docker Compose.
 
 Состоит из:
-- backend (Python HTTP сервер)
+- backend (Flask приложение)
 - nginx (reverse proxy)
 
-nginx принимает HTTP-запросы на порт 80 и проксирует их в backend.
+Nginx принимает HTTP-запросы на порт 80 и проксирует их в backend.
 
 ---
 
-## Структура проекта
-+
+## 🚀 Быстрый запуск
+
+```bash
+git clone https://github.com/XolldaVeres/effective-mobile-test.git
+cd effective-mobile-test
+sudo docker-compose up -d
