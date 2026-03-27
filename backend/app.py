@@ -1,5 +1,5 @@
-from flask import Flask
-from flask import jsonify
+from flask import Flask, jsonify
+import os
 
 app = Flask(__name__)
 
@@ -11,5 +11,10 @@ def hello():
 def api():
     return jsonify({"status": "ok", "message": "Docker + Nginx works!"})
 
+@app.route('/health')
+def health():
+    return jsonify({"status": "healthy"}), 200
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    port = int(os.getenv('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
