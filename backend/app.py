@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return "Hello from Backend! Docker + Nginx works!"
+    return "Hello from Effective Mobile!"
 
 @app.route('/api')
 def api():
-    return jsonify({"status": "ok", "message": "Docker + Nginx works!"})
+    return jsonify({"status": "ok", "message": "Effective Mobile works!"})
 
 @app.route('/health')
 def health():
